@@ -1,11 +1,9 @@
 body {
-  background-image: url("../coding.jpg");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+
 }
 img.work-in-progress {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  max-width: 20em;
+  max-width: 10em;
 }
