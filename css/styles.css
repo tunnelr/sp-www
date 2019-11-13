@@ -2,3 +2,9 @@ body {
   background-image: url("coding.jpg");
   background-repeat: no-repeat;
 }
+img.work-in-progress {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  max-width: 350px;
+}
