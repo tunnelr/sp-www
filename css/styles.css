@@ -1,5 +1,5 @@
 body {
-  background-image: url("/coding.jpg");
+  background-image: url("../coding.jpg");
   background-repeat: no-repeat;
 }
 img.work-in-progress {
