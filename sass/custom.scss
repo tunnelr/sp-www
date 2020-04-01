@@ -1,0 +1,10 @@
+/* customized bootstrap colors */
+$primary: rebeccapurple;
+$danger: #dd0000;
+$success: lime;
+$warning: orange;
+$info: aqua;
+
+$body-bg: #f3f3f0;
+
+@import "../vendor/bootstrap/scss/bootstrap.scss";
