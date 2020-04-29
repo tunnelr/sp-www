@@ -45,3 +45,10 @@ video {
     padding-top: .75rem;
     height: 5rem;
 }
+@media screen and (max-width: 480px) {
+    #header nav ul li {
+        width: auto!important;
+        border-left: 0;
+        border-top: solid 1px #ffffff;
+    }
+}
