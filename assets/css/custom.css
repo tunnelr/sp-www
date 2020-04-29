@@ -1,3 +1,16 @@
 body.is-preload #bg:before {
     background-color: #2C3E50;
 }
+
+#bg:before {
+	background-image: linear-gradient(to top, rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url("../../images/overlay.png"); */
+}
+
+video {
+    position: absolute;
+    min-width: 100%;
+    /* min-height: 100%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);        
+}
