@@ -1,9 +1,6 @@
+/* BG */
 body.is-preload #bg:before {
     background-color: #2C3E50;
-}
-
-#bg:before {
-	background-image: linear-gradient(to top, rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url("../../images/overlay.png"); */
 }
 
 video {
@@ -13,4 +10,38 @@ video {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);        
+}
+
+#bg:before {
+	background-image: linear-gradient(to top, rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url("../../images/overlay.png"); */
+}
+
+/* BRAND LOGO */
+
+.top-logo {
+
+}
+.top-logo img {
+    width: 22rem;
+    height: 8rem;
+}
+
+
+/* NAV BUTTONS */
+#header nav ul li {
+    width: 8rem;
+}
+#header nav ul li a {
+    height: auto;
+    padding: initial;
+}
+.nav-btn {
+
+}
+.nav-btn p {
+    margin-bottom: 0px;
+}
+.nav-btn-icon {
+    padding-top: .75rem;
+    height: 5rem;
 }
