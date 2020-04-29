@@ -253,6 +253,9 @@
 				// Deactivate article.
 					$article.removeClass('active');
 
+				// 	CUSTOM: (in custom.js) save the fact the user already visited this article
+					transactToVisited($article.attr("id"));
+
 				// Hide article.
 					setTimeout(function() {
 
@@ -296,6 +299,7 @@
 						.appendTo($this)
 						.on('click', function() {
 							location.hash = '';
+
 						});
 
 				// Prevent clicks from inside article from bubbling.
