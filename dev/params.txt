@@ -1,0 +1,44 @@
+
+colors:
+  resource to pick/convert/edit colors: https://www.w3schools.com/colors/colors_picker.asp
+  
+  
+  blue light: "SALES"
+     #0A3557
+     rgb(10, 53, 87)
+    
+  blue dark: "& PROMOTIONS SRLS"
+     #2C3E50
+     rgb(44, 62, 80)
+    
+  blue bg: "<footer>"
+     #1B243C
+     rgb(27, 36, 60)
+    
+
+
+  azure light: "medal ribbon light"
+     #0072D9
+     rgb(0, 114, 217)
+    
+  azure dark: "medal ribbon dark"
+     #005EB3
+    rgb(0, 94, 179)
+
+
+
+  yellow light: "medal gold light"
+     #FFD34D
+     rgb(255, 211, 77)
+    
+  yellow dark: "medal gold dark"
+     #F2BA49
+     rgb(242, 186, 73)
+
+
+
+  orange: "logo men head"
+     #FF8946
+     rgb(255, 137, 70)
+    
+

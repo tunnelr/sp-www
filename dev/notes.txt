@@ -1,0 +1,9 @@
+manca:
+  logo_header_white.svg
+    -> deve essere bianco
+    -> deve scalare con le dimensioni dell'elemento
+    -> c'è un elemento rettangolo colorato tipo footer che compare a certi gradi di scaling
+      -> c'è un secondo logo in coda al primo...
+
+
+
