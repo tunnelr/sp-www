@@ -1,3 +1,8 @@
+/* GENERAL */
+.mb-2rem {
+    margin-bottom: 2rem !important;
+}
+
 /* BG */
 body.is-preload #bg:before {
     background-color: #2C3E50;
@@ -16,16 +21,38 @@ video {
 	background-image: linear-gradient(to top, rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url("../../images/overlay.png"); */
 }
 
-/* BRAND LOGO */
 
+/* HEADER */
+#header .content .inner {
+    padding: 2rem 1rem;
+}
+@media screen and (max-width: 736px)
+{
+    #header .content .inner {
+        padding: 1.5rem .5rem;
+    }
+}
+
+/* BRAND LOGO */
 .top-logo {
 
 }
 .top-logo img {
-    width: 22rem;
-    height: 8rem;
+    width: 21rem;
+    height: 7rem;
+}
+@media screen and (max-width: 736px)
+{
+    .top-logo img {
+        width: 20rem;
+        height: 6rem;
+    }
 }
 
+/* SLOGAN TEXT */
+.inner p {
+    margin: 0;
+}
 
 /* NAV BUTTONS */
 #header nav ul li {
@@ -34,12 +61,14 @@ video {
 #header nav ul li a {
     height: auto;
     padding: initial;
+    line-height: 1.25rem;
 }
 .nav-btn {
 
 }
 .nav-btn p {
     margin-bottom: 0px;
+    line-height: 1.75rem;
 }
 .nav-btn-icon {
     padding-top: .75rem;
