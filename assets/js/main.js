@@ -25,11 +25,13 @@
 		});
 
 	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+		// $window.on('load', function() {
+		// 	window.setTimeout(function() {
+		// 		$body.removeClass('is-preload');
+		// 	}, 100);
+		// });
+	// customized and defined in custom.js
+		$window.on('load', function(){pageLoad()});
 
 	// Fix: Flexbox min-height bug on IE.
 		if (browser.name == 'ie') {

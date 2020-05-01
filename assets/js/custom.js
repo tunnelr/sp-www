@@ -41,5 +41,29 @@ const transactToVisited = function(id) {
   let $img = $('a[href="#' + id + '"] img.nav-btn-icon'),
     src = $img.attr("src").replace(".svg","");
   $img.attr("src",src + "-visited.svg");
-}
+};
 
+// called in main.js on page load
+const pageLoad = function() {
+  window.setTimeout(function() {
+    $body = $('body');
+    $body.removeClass('is-preload');
+
+    // progress bar logic
+    $progressBar = $('<div id="progressBar" class="progress"><div class="progress-value"></div></div>');
+    $progressBar.insertBefore($('#header .content .inner'));
+    window.setTimeout(function() {
+      // hide with easing
+      $('#progressBar').animate({height:"0px"},
+        {
+          duration:1000,
+          // remove after animation ends
+          complete:function(){ $(this).remove(); }
+        }
+      );
+      // let the loading animation play for this ms
+    }, 1500);
+
+
+  }, 100)
+};
