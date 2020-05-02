@@ -25,13 +25,13 @@ C = {
 
     // js code for the close button
     closeBtnCb: function() {
-        optIn();
+        $('#tracking-enable-on').prop( "checked", true );
         C.destroyDiv();
     },
 
     // js code for the Ok button
     okBtnCb: function() {
-        optIn();
+        $('#tracking-enable-on').prop( "checked", true );
         C.destroyDiv();
     },
 
