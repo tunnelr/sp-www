@@ -4,14 +4,21 @@ const enableString = "ga-enable-" + gtagProperty;
 
 // cookies radio buttons
 window.onload = function() {
-    $('input[type=radio][name=tracking-enable]').change(function() {
-        if (this.value == 'y') {
-            optIn();
-        }
-        else if (this.value == 'n') {
-            optOut();
-        }
-    });
+  // check/uncheck according to the status
+  if (typeof hasOptedIn !== "undefined" && hasOptedIn()) {
+    $('#tracking-enable-on').prop( "checked", true );
+  } else {
+    $('#tracking-enable-off').prop( "checked", true );
+  }
+  // setup callbacks
+  $('input[type=radio][name=tracking-enable]').change(function() {
+      if (this.value == 'y') {
+          optIn();
+      }
+      else if (this.value == 'n') {
+          optOut();
+      }
+  });
 };
 
 // protect users from being tracked before accepting
