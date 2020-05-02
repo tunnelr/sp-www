@@ -25,8 +25,16 @@ $('.nav-btn').on('mouseout',function(){
   $t.attr("src",src + ".svg");
 });
 
+/**
+*   functions
+*/
+
 // called in main.js when article is getting closed (at line:~257, )
 const transactToVisited = function(id) {
+  if (id === "cookies") {
+    // dont trigger
+    return
+  }
   if (window.localStorage.getItem("visited_" + id)){
     // already ok
     return

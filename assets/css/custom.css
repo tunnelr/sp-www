@@ -116,3 +116,20 @@ video {
         border-top: solid 1px #ffffff;
     }
 }
+
+/* COOKIE BANNER */
+.cookies-alert {
+    /* opacity: .85; */
+    background-color: rgba(44, 62, 80);
+    transition: opacity .15s linear;
+    padding: .75rem 1.25rem;
+    padding-right: 4rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    display: block;
+    z-index: 99999;
+}
+#cookies-banner > button:first-child {
+    box-shadow: none;
+}
+
