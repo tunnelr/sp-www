@@ -97,20 +97,20 @@
         <!-- contatti -->
         <article id="contatti">
           <h2 class="major">Contattaci</h2>
-          <form action="mailto:n.angelini@live.it" method="post" enctype="text/plain">
+          <form>
             <div class="fields">
-              <div class="field half"> <label for="name" form="name">Nome</label>
-                <input name="name" id="name" type="text"> </div>
-              <div class="field half"> <label for="email">Email</label> <input
+              <div class="field half"> <label for="contact-form-name" form="name">Nome</label>
+                <input name="name" id="contact-form-name" type="text"> </div>
+              <!-- <div class="field half"> <label for="contact-form-email">Email</label> <input
                   name="email"
-                  id="email"
+                  id="contact-form-email"
                   type="text">
-              </div>
-              <div class="field"> <label for="message">raccontaci la tua idea</label>
-                <textarea name="message" id="message" rows="4"></textarea> </div>
+              </div> -->
+              <div class="field"> <label for="contact-form-message">Raccontaci la tua idea</label>
+                <textarea name="message" id="contact-form-message" rows="4"></textarea> </div>
             </div>
             <ul class="actions">
-              <li><input value="invia" class="button primary" type="submit"></li>
+              <li><button class="primary" onclick="contactFormMailTo()">Chiudi</button></li>
               <li><input value="cancella" type="reset"></li>
             </ul>
           </form>
