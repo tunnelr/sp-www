@@ -57,7 +57,7 @@ const contactFormMailTo = function() {
   let subject = MAILTO_SUBJECT + username;
   let msg = crNl(euc("Gentile Sales & Promotions srls,\n\n") + usermsg + euc("\n\nCordiali saluti,\n") + username);
   let mts = "mailto:" + recipient + "?subject=" + subject + "&body=" + msg;
-  console.log(msg);
+  // console.log(msg);
   window.location = mts;
 }
 
