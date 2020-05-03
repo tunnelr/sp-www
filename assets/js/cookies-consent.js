@@ -1,7 +1,7 @@
 
 C = {
     // Message banner title
-    bannerTitle: '<i class="fas fa-cookie-bite"></i> ',
+    bannerTitle: 'Attenzione: ',
 
     // Message banner message
     bannerMessage: "Questo sito, unicamente a scopo di analisi del traffico, utilizza cookie tecnici anonimizzati di terze parti. " +
@@ -47,7 +47,7 @@ C = {
             'style="position: fixed; bottom: 0; width: 100%; ' +
             'margin-bottom: 0">' +
 
-            '<button id="cookies-banner-close" class="btn btn-xs mr-0" onclick="C.closeBtnCb()" aria-label="Close" style="position: fixed; right: 10px;"><i class="fas fa-times"></i></button>'+
+            '<button id="cookies-banner-close" class="btn btn-xs mr-0" onclick="C.closeBtnCb()" aria-label="Close" style="position: fixed; right: 10px;"></button>'+
 
             '<div class="container text-center"><div class="row"><div class="col col-12"><strong>' + this.bannerTitle + '</strong> ' +
             this.bannerMessage +
