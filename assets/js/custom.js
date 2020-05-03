@@ -40,6 +40,13 @@ $('.nav-btn').on('mouseout',function(){
 /**
 *   functions
 */
+function replaceAll(str, find, replace) {
+  return str.replace(new RegExp(find, 'g'), replace);
+}
+function crNl(str) {
+  str = replaceAll(str,"%0D%0A","%0A");
+  return replaceAll(str,"%0A","%0D%0A")
+}
 
 // build mailto link with fields embedded
 const contactFormMailTo = function() {
@@ -48,8 +55,9 @@ const contactFormMailTo = function() {
   let usermsg = euc($('#contact-form-message').val()) || "<messaggio vuoto>";
   let recipient = MAILTO_ADDR;
   let subject = MAILTO_SUBJECT + username;
-  let msg = euc("Gentile Sales & Promotions srls,\n\n") + usermsg + euc("\nCordiali saluti,\n") + username;
+  let msg = crNl(euc("Gentile Sales & Promotions srls,\n\n") + usermsg + euc("\nCordiali saluti,\n") + username);
   let mts = "mailto:" + recipient + "?subject=" + subject + "&body=" + msg;
+  console.log(msg);
   window.location = mts;
 }
 
