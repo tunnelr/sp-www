@@ -1,19 +1,7 @@
 /*
   custom javascript
 */
-const MAILTO_ADDR = "n.angelini@live.it";
-const MAILTO_SUBJECT = "Messaggio di ";
 
-// prevent default #contatti form
-$(document).ready(function() {
-  $('#contatti form').on('submit', function(e){
-    e.preventDefault();
-  });
-});
-
-/**
-* NAV ICONS
-*/
 // apply nav icons accordingly
 // if already visited
 let btn_ids = ["innovazione","strumenti","crescita","contatti"];
@@ -40,19 +28,6 @@ $('.nav-btn').on('mouseout',function(){
 /**
 *   functions
 */
-
-// build mailto link with fields embedded
-const contactFormMailTo = function() {
-  let euc = encodeURIComponent;
-  let username = euc($('#contact-form-name').val()) || "<nessun nome>";
-  let usermsg = euc($('#contact-form-message').val()) || "<messaggio vuoto>";
-  let recipient = MAILTO_ADDR;
-  let subject = MAILTO_SUBJECT + username;
-  let msg = euc("Gentile Sales & Promotions srls,\n\n") + usermsg + euc("\nCordiali saluti,\n") + username;
-  let mts = "mailto:" + recipient + "?subject=" + subject + "&body=" + msg;
-  window.location = mts;
-}
-
 
 // called in main.js when article is getting closed (at line:~257, )
 const transactToVisited = function(id) {
