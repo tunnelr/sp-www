@@ -37,22 +37,25 @@ C = {
 
     // dismiss the banner
     destroyDiv: function() {
-        $('#cookies-banner').remove();
+        // destroy after a brief timeout to avoid bugs happening when browser expect a return and the caller (button) has been killed
+        setTimeout(function(){$('#cookies-banner').remove()},250);
     },
 
     createDiv: function () {
         var banner = $(
             '<div id="cookies-banner" class="cookies-alert" ' +
-            'role="alert" style="position: fixed; bottom: 0; width: 100%; ' +
+            'style="position: fixed; bottom: 0; width: 100%; ' +
             'margin-bottom: 0">' +
 
-            '<button class="btn btn-xs mr-0" onclick="C.closeBtnCb();" data-dismiss="alert" aria-label="Close" style="position: fixed; right: 10px;"><i class="fas fa-times"></i></button>'+
+            '<button id="cookies-banner-close" class="btn btn-xs mr-0" onclick="C.closeBtnCb()" aria-label="Close" style="position: fixed; right: 10px;"><i class="fas fa-times"></i></button>'+
 
             '<div class="container text-center"><div class="row"><div class="col col-12"><strong>' + this.bannerTitle + '</strong> ' +
             this.bannerMessage +
-            '</div></div><div class="row"><div class="col col-12"><button type="button" class="btn ' +
-             this.buttonClass + '" onclick="C.okBtnCb();" data-dismiss="alert" aria-label="Accept">' +
-            this.bannerButton + '</button></div></div></div></div>'
+            '</div></div><div class="row"><div class="col col-12"><button id="cookies-banner-close" type="button" class="btn ' +
+             this.buttonClass + '" onclick="C.okBtnCb()" aria-label="Accept">' +
+            this.bannerButton + '</button></div></div></div></div>' +
+            // do not trigger other click function on the page
+            "<script>$('#cookies-banner').on('click', function(event) {event.stopPropagation();});</script>"
         );
         $("body").append(banner);
         

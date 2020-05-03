@@ -10,6 +10,7 @@ window.onload = function() {
   } else {
     $('#tracking-enable-off').prop( "checked", true );
   }
+  
   // setup callbacks
   $('input[type=radio][name=tracking-enable]').change(function() {
       if (this.value == 'y') {
